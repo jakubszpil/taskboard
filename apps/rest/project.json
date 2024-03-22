@@ -1,0 +1,24 @@
+{
+  "name": "rest",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/rest/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "rest:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "rest:build:development"
+        },
+        "production": {
+          "buildTarget": "rest:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
